@@ -1,0 +1,4 @@
+.elements__description {
+  display: flex;
+  justify-content: space-between;	
+}

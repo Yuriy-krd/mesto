@@ -1,0 +1,24 @@
+.page {
+  color: #fff;
+  max-width: 880px;
+  width: 69%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #000;
+  font-family: 'Inter', 'Arial', sans-serif;
+}
+
+@media all and (max-width: 1024px) {
+  .page {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .page {
+    padding: 0;
+    width: 320px;
+    margin: 0;
+  }
+}

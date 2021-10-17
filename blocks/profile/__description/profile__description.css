@@ -1,0 +1,11 @@
+.profile__description {
+  display: grid;	
+}
+
+
+
+@media all and (max-width: 320px) {
+  .profile__description {
+    margin: 0 auto;
+  }
+}

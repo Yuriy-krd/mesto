@@ -1,0 +1,16 @@
+.elements__like {
+  margin-right: 7%;
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/vector.svg);
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  cursor: pointer;
+  border: none;
+  align-self: center;
+}
+
+.elements__like:hover {	
+  opacity: 0.5;
+}

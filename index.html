@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <img src="./images/header-logo.svg" class="header__logo" alt="изображение миниатюрной карты России" />
+      </header>
+      <main class="main">
+        <section class="profile">
+          <img src="./images/avatar.jpg" alt="фотография пользователя" class="profile__avatar" />
+          <div class="profile__info">
+            <div class="profile__description">
+              <h1 class="profile__title">Жак-Ив Кусто</h1>
+              <button class="profile__edit-button" type="button" aria-label="редактирование профиля"></button>
+              <p class="profile__profession">исследователь океанов</p>
+            </div>
+            <button class="profile__add-button" type="button"></button>
+          </div>
+        </section>
+        <section class="elements">
+          <div class="elements__element">
+            <img src="./images/azov.jpg" alt="фотография побережья Азовского моря" class="elements__image" />
+            <div class="elements__description">
+              <h2 class="elements__mesto">Азовское море</h2>
+              <button type="button" class="elements__like"></button>
+            </div>
+          </div>
+          <div class="elements__element">
+            <img src="./images/kazan.jpg" alt="фотография города Казань" class="elements__image" />
+            <div class="elements__description">
+              <h2 class="elements__mesto">Казань</h2>
+              <button type="button" class="elements__like"></button>
+            </div>
+          </div>
+          <div class="elements__element">
+            <img src="./images/sochi.jpg" alt="фотография Олимпийского парка в Сочи" class="elements__image" />
+            <div class="elements__description">
+              <h2 class="elements__mesto">Сочи</h2>
+              <button type="button" class="elements__like"></button>
+            </div>
+          </div>
+          <div class="elements__element">
+            <img src="./images/volgograd.jpg" alt="фотография монумента Родина-мать в Волгограде" class="elements__image" />
+            <div class="elements__description">
+              <h2 class="elements__mesto">Волгоград</h2>
+              <button type="button" class="elements__like"></button>
+            </div>
+          </div>
+          <div class="elements__element">
+            <img src="./images/lagonaki.jpg" alt="фотография горного хребта Лаго-Наки Кавказских гор" class="elements__image" />
+            <div class="elements__description">
+              <h2 class="elements__mesto">Лаго-Наки</h2>
+              <button type="button" class="elements__like"></button>
+            </div>
+          </div>
+          <div class="elements__element">
+            <img src="./images/nn.jpg" alt="фотография моста через Волгу в городе Нижний Новгород" class="elements__image" />
+            <div class="elements__description">
+              <h2 class="elements__mesto">Нижний Новгород</h2>
+              <button type="button" class="elements__like"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">© 2021 Balashov Yuriy Russia</p>
+      </footer>
+      <div class="popup">
+        <form method="post" name="popup_form" class="popup__container">
+          <button type="button" class="popup__close" aria-label="Закрыть всплывающее окно"></button>
+          <h3 class="popup__text">Редактировать профиль</h3>
+          <input type="text" name="profile__title" class="popup__title" value="Жак-Ив Кусто" />
+          <input type="text" name="profile__profession" class="popup__profession" value="Исследователь океанов" />
+          <button type="submit" class="popup__save" aria-label="кнопка сохранения изменений профиля">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
