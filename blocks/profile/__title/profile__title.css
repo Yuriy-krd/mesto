@@ -13,10 +13,15 @@
   padding: 0;
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 525px) {
+  .profile__title {
+    justify-self: center;
+  }
+}
+
+@media all and (max-width: 345px) {
   .profile__title {
     font-size: 27px;
     line-height: 33px;
-    text-align: center;
   }
 }

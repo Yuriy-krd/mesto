@@ -10,12 +10,13 @@
 @media all and (max-width: 768px) {
   .profile__info {
     margin-top: 26px;
+    justify-content: space-around;
  }
 }
 
 @media all and (max-width: 525px) {
   .profile__info {
     flex-direction: column;
-    margin: 26px 19px 0;	
-  }	
+    margin: 26px 19px 0;
+  }
 }

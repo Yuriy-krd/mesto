@@ -16,14 +16,14 @@
 }
 
 .popup__save:hover {
-  background: #000000;
   opacity: 0.8;
-  border-radius: 2px;
 }
 
 @media all and (max-width: 320px) {
   .popup__save {
     font-size: 14px;
     line-height: 17px;
+    margin: 45px 22px 25px;
+    padding: 14px 82px;
   }
 }

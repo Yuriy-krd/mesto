@@ -13,10 +13,15 @@
   padding: 0;
 }
 
+@media all and (max-width: 525px) {
+  .profile__profession {
+    text-align: center;
+  }
+}
+
 @media all and (max-width: 320px) {
   .profile__profession {
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
   }
 }
