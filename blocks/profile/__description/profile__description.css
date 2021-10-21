@@ -2,16 +2,5 @@
   display: grid;
   margin: 0;
   padding: 0;
-}
-
-@media all and (max-width: 525px) {
-  .profile__description {
-
-  }
-}
-
-@media all and (max-width: 330px) {
-  .profile__description {
-    margin: 0 auto;
-  }
+  overflow: hidden;
 }

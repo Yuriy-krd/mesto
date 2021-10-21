@@ -9,7 +9,7 @@
 
 @media all and (max-width: 768px) {
   .profile__info {
-    margin-top: 26px;
+    margin: 26px auto 0;
     justify-content: space-around;
  }
 }

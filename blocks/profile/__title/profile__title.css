@@ -16,10 +16,11 @@
 @media all and (max-width: 525px) {
   .profile__title {
     justify-self: center;
+    max-width: 100%;
   }
 }
 
-@media all and (max-width: 345px) {
+@media all and (max-width: 365px) {
   .profile__title {
     font-size: 27px;
     line-height: 33px;
