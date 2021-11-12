@@ -10,7 +10,8 @@
   object-fit: cover;
   cursor: pointer;
   border: none;
-  align-self: center;  
+  align-self: center;
+  z-index: 1;
 }
 
 .elements__delete:hover {
