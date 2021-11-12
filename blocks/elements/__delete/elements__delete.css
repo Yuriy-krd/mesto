@@ -9,9 +9,8 @@
   background-repeat: no-repeat;
   object-fit: cover;
   cursor: pointer;
-  border: none;
-  align-self: center;
-  z-index: 1;
+  border: none;  
+  z-index: 2;
 }
 
 .elements__delete:hover {
