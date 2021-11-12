@@ -6,7 +6,6 @@
     <title>Место</title>
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
-
   <body class="body">
     <div class="page">
       <header class="header">
@@ -24,49 +23,7 @@
             <button class="profile__add-button" type="button"></button>
           </div>
         </section>
-        <section class="elements">
-          <div class="elements__element">
-            <img src="./images/azov.jpg" alt="фотография побережья Азовского моря" class="elements__image" />
-            <div class="elements__description">
-              <h2 class="elements__mesto">Азовское море</h2>
-              <button type="button" class="elements__like"></button>
-            </div>
-          </div>
-          <div class="elements__element">
-            <img src="./images/kazan.jpg" alt="фотография города Казань" class="elements__image" />
-            <div class="elements__description">
-              <h2 class="elements__mesto">Казань</h2>
-              <button type="button" class="elements__like"></button>
-            </div>
-          </div>
-          <div class="elements__element">
-            <img src="./images/sochi.jpg" alt="фотография Олимпийского парка в Сочи" class="elements__image" />
-            <div class="elements__description">
-              <h2 class="elements__mesto">Сочи</h2>
-              <button type="button" class="elements__like"></button>
-            </div>
-          </div>
-          <div class="elements__element">
-            <img src="./images/volgograd.jpg" alt="фотография монумента Родина-мать в Волгограде" class="elements__image" />
-            <div class="elements__description">
-              <h2 class="elements__mesto">Волгоград</h2>
-              <button type="button" class="elements__like"></button>
-            </div>
-          </div>
-          <div class="elements__element">
-            <img src="./images/lagonaki.jpg" alt="фотография горного хребта Лаго-Наки Кавказских гор" class="elements__image" />
-            <div class="elements__description">
-              <h2 class="elements__mesto">Лаго-Наки</h2>
-              <button type="button" class="elements__like"></button>
-            </div>
-          </div>
-          <div class="elements__element">
-            <img src="./images/nn.jpg" alt="фотография моста через Волгу в городе Нижний Новгород" class="elements__image" />
-            <div class="elements__description">
-              <h2 class="elements__mesto">Нижний Новгород</h2>
-              <button type="button" class="elements__like"></button>
-            </div>
-          </div>
+        <section class="elements">                  
         </section>
       </main>
       <footer class="footer">
@@ -84,6 +41,15 @@
         </div>
       </div>
     </div>
+    <template class = "card-template">
+      <div class="elements__element">        
+        <img src=""  class="elements__image" />
+        <div class="elements__description">
+          <h2 class="elements__mesto"></h2>
+          <button type="button" class="elements__like"></button>
+          <button type="button" class="elements__delete"></button>
+        </div> 
+    </template>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
