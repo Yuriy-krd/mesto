@@ -1,6 +1,6 @@
 .elements {
   display: grid;
-  max-width: 100%;
+  width: 100%;
   grid-template-columns: repeat(3, 31%);
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 17px;

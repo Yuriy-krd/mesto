@@ -45,6 +45,10 @@ function popupOpen() {
   popup.classList.add('popup_open');
 }
 
+function popupAddOpen() {
+  
+}
+
 function popupClose() {
   popup.classList.remove('popup_open');
 }
@@ -75,4 +79,4 @@ initialCards.forEach(function (element) {
 form.addEventListener('submit', formSubmitHandler);
 editProfileButton.addEventListener('click', popupOpen);
 closePopupButton.addEventListener('click', popupClose);
-addPictureButton.addEventListener('click', popupOpen);
+addPictureButton.addEventListener('click', popupAddOpen);
