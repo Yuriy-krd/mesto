@@ -46,21 +46,16 @@ function popupOpen() {
   popup.classList.add('popup_open');
 }
 
-initialCards.forEach(function (element) {
-  const cardElement = itemTemplate.cloneNode(true);
-  cardElement.querySelector('.elements__image').src = element.link;
-  cardElement.querySelector('.elements__mesto').textContent = element.name;
-  elements.append(cardElement);
-}) 
-
 function popupClose() {
   popup.classList.remove('popup_open');
 }
 
-function deleteCard() {
-  console.log('click');
-  const delItem = deleteCardIcon.closest('.elements__element');  
-  delItem.remove();
+function deleteCard(event) {  
+  event.target.closest('.elements__element').remove();
+}
+
+function Del(element) {
+  element.querySelector('.elements__delete').addEventListener('click', deleteCard);
 }
 
 function formSubmitHandler(evt) {
@@ -70,8 +65,15 @@ function formSubmitHandler(evt) {
   popupClose();
 }
 
+initialCards.forEach(function (element) {
+  const cardElement = itemTemplate.cloneNode(true);
+  cardElement.querySelector('.elements__image').src = element.link;
+  cardElement.querySelector('.elements__mesto').textContent = element.name;
+  elements.append(cardElement);
+})
+
 form.addEventListener('submit', formSubmitHandler);
 editProfileButton.addEventListener('click', popupOpen);
 closePopupButton.addEventListener('click', popupClose);
 addPictureButton.addEventListener('click', popupOpen);
-deleteCardIcon.addEventListener('click', deleteCard);
+Del();
