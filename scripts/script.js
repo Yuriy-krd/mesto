@@ -10,7 +10,6 @@ let popup = document.querySelector('.popup');
 let form = document.querySelector('.popup__container');
 let addPictureButton = document.querySelector('.profile__add-button');
 let itemTemplate = document.querySelector('.card-template').content;
-let deleteCardIcon = document.querySelector('.elements__delete');
 
 
 const initialCards = [
