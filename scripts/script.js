@@ -50,12 +50,12 @@ function popupClose() {
   popup.classList.remove('popup_open');
 }
 
-function deleteCard(event) {  
-  event.target.closest('.elements__element').remove();
+function trashListener(element) {
+  element.querySelector('.elements__delete').addEventListener('click', deleteCard);
 }
 
-function Del(element) {
-  element.querySelector('.elements__delete').addEventListener('click', deleteCard);
+function deleteCard(event) {  
+  event.target.closest('.elements__element').remove();
 }
 
 function formSubmitHandler(evt) {
@@ -69,11 +69,11 @@ initialCards.forEach(function (element) {
   const cardElement = itemTemplate.cloneNode(true);
   cardElement.querySelector('.elements__image').src = element.link;
   cardElement.querySelector('.elements__mesto').textContent = element.name;
-  elements.append(cardElement);
+  trashListener(cardElement);
+  elements.append(cardElement);  
 })
 
 form.addEventListener('submit', formSubmitHandler);
 editProfileButton.addEventListener('click', popupOpen);
 closePopupButton.addEventListener('click', popupClose);
 addPictureButton.addEventListener('click', popupOpen);
-Del();
