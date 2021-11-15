@@ -1,6 +1,5 @@
 .elements__like_active {
-  opacity: 1;
-  z-index: 1;
+  opacity: 1;  
   margin-right: 7%;
   width: 22px;
   height: 19px;
