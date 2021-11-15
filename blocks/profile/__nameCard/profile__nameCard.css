@@ -1,0 +1,28 @@
+.profile__nameCard {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #FFFFFF;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 294px;
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (max-width: 525px) {
+  .profile__nameCard {
+    justify-self: center;
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 365px) {
+  .profile__nameCard {
+    font-size: 27px;
+    line-height: 33px;
+  }
+}

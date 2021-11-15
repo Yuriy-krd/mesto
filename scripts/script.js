@@ -7,6 +7,7 @@ let closePopupButton = document.querySelector('.popup__close');
 let popupName = document.querySelector('.popup__input_type_title');
 let popupProfession = document.querySelector('.popup__input_type_profession');
 let popup = document.querySelector('.popup');
+let popupAddCard = document.querySelector('.popupAddCard');
 let form = document.querySelector('.popup__container');
 let addPictureButton = document.querySelector('.profile__add-button');
 let itemTemplate = document.querySelector('.card-template').content;
@@ -45,8 +46,8 @@ function popupOpen() {
   popup.classList.add('popup_open');
 }
 
-function popupAddOpen() {
-  
+function popupAddOpen() {  
+  popupAddCard.classList.add('popup_open');
 }
 
 function popupClose() {
@@ -61,6 +62,14 @@ function deleteCard(event) {
   event.target.closest('.elements__element').remove();
 }
 
+function likeListener(element) {
+  element.querySelector('.elements__like').addEventListener('click', likeElement);
+}
+
+function likeElement(event) {  
+  event.target.classList.toggle('elements__like_active');
+}
+
 function formSubmitHandler(evt) {
   evt.preventDefault();
   nameInput.textContent = popupName.value;
@@ -73,6 +82,7 @@ initialCards.forEach(function (element) {
   cardElement.querySelector('.elements__image').src = element.link;
   cardElement.querySelector('.elements__mesto').textContent = element.name;
   trashListener(cardElement);
+  likeListener(cardElement);
   elements.append(cardElement);  
 })
 
