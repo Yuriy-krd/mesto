@@ -41,17 +41,20 @@
         </div>
       </div>
       <div class="popupAddCard">
-        <div class="popup__container">
+        <div class="popupAddCard__container">
           <button type="button" class="popupAddCard__close" aria-label="Закрыть всплывающее окно"></button>
           <h3 class="popup__text">Новое место</h3>
-          <form method="post" name="popup_form" class="popup__form">
-            <input type="text" name="profile__nameCard" class="popup__input popup__input_type_title" placeholder="Название" />
-            <input type="text" name="profile__linkCard" class="popup__input popup__input_type_profession" placeholder="ссылка на картинку" />
-            <button type="submit" class="popup__save" aria-label="кнопка сохранения изменений профиля">Создать</button>
+          <form method="post" name="popupAddCard_form" class="popup__form">
+            <input type="text" name="profile__nameCard" class="popup__input popup__input_type_name" placeholder="Название" />
+            <input type="text" name="profile__linkCard" class="popup__input popup__input_type_link" placeholder="ссылка на картинку" />
+            <button type="submit" class="popupAddCard__save" aria-label="кнопка добавления новой карточки">Создать</button>
           </form>
         </div>
       </div>
+      <div class="popupImage">
+
       </div>
+    </div>
     </div>
     <template class = "card-template">
       <div class="elements__element">        

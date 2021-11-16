@@ -8,8 +8,11 @@ let popupName = document.querySelector('.popup__input_type_title');
 let popupProfession = document.querySelector('.popup__input_type_profession');
 let popup = document.querySelector('.popup');
 let popupAddCard = document.querySelector('.popupAddCard');
+let popupLinkAddCard = document.querySelector('.popup__input_type_link');
+let popupNameAddCard = document.querySelector('.popup__input_type_name');
 let closePopupAddCard = document.querySelector('.popupAddCard__close');
 let form = document.querySelector('.popup__container');
+let formSubmitAddCard = document.querySelector('.popupAddCard__container');
 let addPictureButton = document.querySelector('.profile__add-button');
 let itemTemplate = document.querySelector('.card-template').content;
 
@@ -48,7 +51,7 @@ function popupOpen() {
 }
 
 function popupAddOpen() {  
-  popupAddCard.classList.add('popupAddCard_open');
+  popupAddCard.classList.add('popupAddCard_open');  
 }
 
 function popupClose() {
@@ -82,6 +85,17 @@ function formSubmitHandler(evt) {
   popupClose();
 }
 
+function formSubmitAddCardHandler(evt) {
+  evt.preventDefault();
+  const cardElement = itemTemplate.cloneNode(true);
+  cardElement.querySelector('.elements__image').src = popupLinkAddCard.value;
+  cardElement.querySelector('.elements__mesto').textContent = popupNameAddCard.value;
+  trashListener(cardElement);
+  likeListener(cardElement);
+  elements.prepend(cardElement);
+  popupAddCardClose();
+}
+
 initialCards.forEach(function (element) {
   const cardElement = itemTemplate.cloneNode(true);
   cardElement.querySelector('.elements__image').src = element.link;
@@ -91,6 +105,7 @@ initialCards.forEach(function (element) {
   elements.append(cardElement);  
 })
 
+formSubmitAddCard.addEventListener('submit', formSubmitAddCardHandler);
 form.addEventListener('submit', formSubmitHandler);
 editProfileButton.addEventListener('click', popupOpen);
 closePopupButton.addEventListener('click', popupClose);
