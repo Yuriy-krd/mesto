@@ -1,0 +1,30 @@
+.popupAddCard__close {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  background-image: url('../../../images/close-icon.svg');
+  top: -48px;
+  right: -48px;
+  object-fit: cover;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  cursor: pointer;	
+}
+
+.popupAddCard__close:hover {
+  opacity: 0.6;
+}
+
+@media all and (max-width: 525px) {
+  .popupAddCard__close {
+    height: 26px;
+    width: 26px;
+    top:  -50px;
+    right: 0px;	
+  }
+}

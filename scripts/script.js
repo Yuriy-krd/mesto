@@ -8,6 +8,7 @@ let popupName = document.querySelector('.popup__input_type_title');
 let popupProfession = document.querySelector('.popup__input_type_profession');
 let popup = document.querySelector('.popup');
 let popupAddCard = document.querySelector('.popupAddCard');
+let closePopupAddCard = document.querySelector('.popupAddCard__close');
 let form = document.querySelector('.popup__container');
 let addPictureButton = document.querySelector('.profile__add-button');
 let itemTemplate = document.querySelector('.card-template').content;
@@ -47,11 +48,15 @@ function popupOpen() {
 }
 
 function popupAddOpen() {  
-  popupAddCard.classList.add('popup_open');
+  popupAddCard.classList.add('popupAddCard_open');
 }
 
 function popupClose() {
   popup.classList.remove('popup_open');
+}
+
+function popupAddCardClose() {
+  popupAddCard.classList.remove('popupAddCard_open');
 }
 
 function trashListener(element) {
@@ -90,3 +95,4 @@ form.addEventListener('submit', formSubmitHandler);
 editProfileButton.addEventListener('click', popupOpen);
 closePopupButton.addEventListener('click', popupClose);
 addPictureButton.addEventListener('click', popupAddOpen);
+closePopupAddCard.addEventListener('click', popupAddCardClose);
