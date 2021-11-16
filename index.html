@@ -1,70 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Место</title>
-    <link rel="stylesheet" href="./pages/index.css" />
-  </head>
-  <body class="body">
-    <div class="page">
-      <header class="header">
-        <img src="./images/header-logo.svg" class="header__logo" alt="изображение миниатюрной карты России" />
-      </header>
-      <main class="main">
-        <section class="profile">
-          <img src="./images/avatar.jpg" alt="фотография пользователя" class="profile__avatar" />
-          <div class="profile__info">
-            <div class="profile__description">
-              <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button class="profile__edit-button" type="button" aria-label="редактирование профиля"></button>
-              <p class="profile__profession">исследователь океанов</p>
-            </div>
-            <button class="profile__add-button" type="button"></button>
-          </div>
-        </section>
-        <section class="elements">                  
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">© 2021 Balashov Yuriy Russia</p>
-      </footer>
-      <div class="popup">
-        <div class="popup__container">
-          <button type="button" class="popup__close" aria-label="Закрыть всплывающее окно"></button>
-          <h3 class="popup__text">Редактировать профиль</h3>
-          <form method="post" name="popup_form" class="popup__form">
-            <input type="text" name="profile__title" class="popup__input popup__input_type_title" value="Жак-Ив Кусто" />
-            <input type="text" name="profile__profession" class="popup__input popup__input_type_profession" value="Исследователь океанов" />
-            <button type="submit" class="popup__save" aria-label="кнопка сохранения изменений профиля">Сохранить</button>
-          </form>
-        </div>
-      </div>
-      <div class="popupAddCard">
-        <div class="popupAddCard__container">
-          <button type="button" class="popupAddCard__close" aria-label="Закрыть всплывающее окно"></button>
-          <h3 class="popup__text">Новое место</h3>
-          <form method="post" name="popupAddCard_form" class="popup__form">
-            <input type="text" name="profile__nameCard" class="popup__input popup__input_type_name" placeholder="Название" />
-            <input type="text" name="profile__linkCard" class="popup__input popup__input_type_link" placeholder="ссылка на картинку" />
-            <button type="submit" class="popupAddCard__save" aria-label="кнопка добавления новой карточки">Создать</button>
-          </form>
-        </div>
-      </div>
-      <div class="popupImage">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Место</title>
+  <link rel="stylesheet" href="./pages/index.css" />
+</head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <img src="./images/header-logo.svg" class="header__logo" alt="изображение миниатюрной карты России" />
+    </header>
+    <main class="main">
+      <section class="profile">
+        <img src="./images/avatar.jpg" alt="фотография пользователя" class="profile__avatar" />
+        <div class="profile__info">
+          <div class="profile__description">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button" type="button" aria-label="редактирование профиля"></button>
+            <p class="profile__profession">исследователь океанов</p>
+          </div>
+          <button class="profile__add-button" type="button"></button>
+        </div>
+      </section>
+      <section class="elements">
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">© 2021 Balashov Yuriy Russia</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <button type="button" class="popup__close" aria-label="Закрыть всплывающее окно"></button>
+        <h3 class="popup__text">Редактировать профиль</h3>
+        <form method="post" name="popup_form" class="popup__form">
+          <input type="text" name="profile__title" class="popup__input popup__input_type_title" value="Жак-Ив Кусто" />
+          <input type="text" name="profile__profession" class="popup__input popup__input_type_profession"
+            value="Исследователь океанов" />
+          <button type="submit" class="popup__save" aria-label="кнопка сохранения изменений профиля">Сохранить</button>
+        </form>
       </div>
     </div>
+    <div class="popupAddCard">
+      <div class="popupAddCard__container">
+        <button type="button" class="popupAddCard__close" aria-label="Закрыть всплывающее окно"></button>
+        <h3 class="popup__text">Новое место</h3>
+        <form method="post" name="popupAddCard_form" class="popup__form">
+          <input type="text" name="profile__nameCard" class="popup__input popup__input_type_name"
+            placeholder="Название" />
+          <input type="text" name="profile__linkCard" class="popup__input popup__input_type_link"
+            placeholder="ссылка на картинку" />
+          <button type="submit" class="popupAddCard__save"
+            aria-label="кнопка добавления новой карточки">Создать</button>
+        </form>
+      </div>
     </div>
-    <template class = "card-template">
-      <div class="elements__element">        
-        <img src=""  class="elements__image" />
-        <div class="elements__description">
-          <h2 class="elements__mesto"></h2>
-          <button type="button" class="elements__like"></button>
-          <button type="button" class="elements__delete"></button>
-        </div> 
-    </template>
-    <script src="./scripts/script.js"></script>
-  </body>
+    <div class="popupImage">
+      <div class="popupImage__container">
+        <img src="" class="elements__image" />
+        <p class="elements__mesto"></p>
+        <button type="button" class="popupImage__close" aria-label="Закрыть всплывающее окно"></button>        
+      </div>
+    </div>
+  </div>
+  </div>
+  <template class="card-template">
+    <div class="elements__element">
+      <img src="" class="elements__image" />
+      <div class="elements__description">
+        <h2 class="elements__mesto"></h2>
+        <button type="button" class="elements__like"></button>
+        <button type="button" class="elements__delete"></button>
+      </div>
+  </template>
+  <script src="./scripts/script.js"></script>
+</body>
+
 </html>

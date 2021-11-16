@@ -15,7 +15,8 @@ let form = document.querySelector('.popup__container');
 let formSubmitAddCard = document.querySelector('.popupAddCard__container');
 let addPictureButton = document.querySelector('.profile__add-button');
 let itemTemplate = document.querySelector('.card-template').content;
-
+let popupImage = document.querySelector('.popupImage');
+let closeImage = document.querySelector('.popupImage__close');
 
 const initialCards = [
   {
@@ -50,8 +51,8 @@ function popupOpen() {
   popup.classList.add('popup_open');
 }
 
-function popupAddOpen() {  
-  popupAddCard.classList.add('popupAddCard_open');  
+function popupAddOpen() {
+  popupAddCard.classList.add('popupAddCard_open');
 }
 
 function popupClose() {
@@ -66,7 +67,7 @@ function trashListener(element) {
   element.querySelector('.elements__delete').addEventListener('click', deleteCard);
 }
 
-function deleteCard(event) {  
+function deleteCard(event) {
   event.target.closest('.elements__element').remove();
 }
 
@@ -74,7 +75,7 @@ function likeListener(element) {
   element.querySelector('.elements__like').addEventListener('click', likeElement);
 }
 
-function likeElement(event) {  
+function likeElement(event) {
   event.target.classList.toggle('elements__like_active');
 }
 
@@ -92,8 +93,21 @@ function formSubmitAddCardHandler(evt) {
   cardElement.querySelector('.elements__mesto').textContent = popupNameAddCard.value;
   trashListener(cardElement);
   likeListener(cardElement);
+  openImageListener(cardElement);
   elements.prepend(cardElement);
   popupAddCardClose();
+}
+
+function openImageListener(element) {
+  element.querySelector('.elements__image').addEventListener('click', viewImage);
+}
+
+function viewImage() {
+  popupImage.classList.add('popupImage_open');
+}
+
+function popupImageClose() {
+  popupImage.classList.remove('popupImage_open');
 }
 
 initialCards.forEach(function (element) {
@@ -102,7 +116,8 @@ initialCards.forEach(function (element) {
   cardElement.querySelector('.elements__mesto').textContent = element.name;
   trashListener(cardElement);
   likeListener(cardElement);
-  elements.append(cardElement);  
+  openImageListener(cardElement);
+  elements.append(cardElement);
 })
 
 formSubmitAddCard.addEventListener('submit', formSubmitAddCardHandler);
@@ -111,3 +126,4 @@ editProfileButton.addEventListener('click', popupOpen);
 closePopupButton.addEventListener('click', popupClose);
 addPictureButton.addEventListener('click', popupAddOpen);
 closePopupAddCard.addEventListener('click', popupAddCardClose);
+closeImage.addEventListener('click', popupImageClose);
