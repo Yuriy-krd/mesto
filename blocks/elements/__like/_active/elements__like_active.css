@@ -1,10 +1,9 @@
 .elements__like_active {
-  opacity: 1;  
+  opacity: 1;
   margin-right: 7%;
   width: 22px;
   height: 19px;
   background-image: url(../../../../images/liked.svg);
-  /* background-color: rgba(0, 0, 0, 0); */
   background-repeat: no-repeat;
   object-fit: cover;
   cursor: pointer;
