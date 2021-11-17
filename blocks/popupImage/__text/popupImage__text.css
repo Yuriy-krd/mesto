@@ -1,0 +1,15 @@
+.popupImage__text {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  max-width: 290px;
+  max-height: 12px;
+  bottom: -10px;
+  left: 0;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+}

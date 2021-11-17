@@ -2,9 +2,8 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  height: 75vh;
-  width: 75vw;
+  max-height: 75vh;
+  max-width: 75vw;  
   margin: auto;
-  padding: 0;  
-  outline: 1px solid red;;
+  padding: 0;
 }
