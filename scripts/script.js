@@ -106,8 +106,6 @@ function viewImage(element) {
   popupImage.classList.add('popupImage_open');
   popupImage.querySelector('.popupImage__image').src = element.target.src;
   popupImage.querySelector('.popupImage__text').textContent = element.target.nextElementSibling.querySelector('.elements__mesto').textContent;
-  // element.target.textContent;
-  console.log(element);
 }
 
 function popupImageClose() {
