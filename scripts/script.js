@@ -116,6 +116,7 @@ initialCards.forEach(function (element) {
   const cardElement = itemTemplate.cloneNode(true);
   cardElement.querySelector('.elements__image').src = element.link;
   cardElement.querySelector('.elements__mesto').textContent = element.name;
+  cardElement.querySelector('.elements__image').alt = element.name;
   trashListener(cardElement);
   likeListener(cardElement);
   openImageListener(cardElement);
