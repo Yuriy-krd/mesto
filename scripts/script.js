@@ -53,14 +53,6 @@ function popupClose(popupElement) {
   popupElement.classList.remove('popup_open');
 }
 
-function popupAddOpen() {
-  popupAddCard.classList.add('popupAddCard_open');
-}
-
-function popupAddCardClose() {
-  popupAddCard.classList.remove('popupAddCard_open');
-}
-
 function trashListener(element) {
   element.querySelector('.elements__delete').addEventListener('click', deleteCard);
 }
@@ -93,7 +85,7 @@ function formSubmitAddCardHandler(evt) {
   likeListener(cardElement);
   openImageListener(cardElement);
   elements.prepend(cardElement);
-  popupAddCardClose();
+  popupClose(popupAddCard);
 }
 
 function openImageListener(element) {
@@ -134,5 +126,7 @@ closePopupButton.addEventListener('click', function() {
 addPictureButton.addEventListener('click', function() {
   popupOpen(popupAddCard);
 });
-closePopupAddCard.addEventListener('click', popupAddCardClose);
+closePopupAddCard.addEventListener('click', function(){
+  popupClose(popupAddCard);
+});
 closeImage.addEventListener('click', popupImageClose);

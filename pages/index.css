@@ -11,7 +11,6 @@
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popupAddCard/popupAddCard.css);
-@import url(../blocks/popupAddCard/_open/popupAddCard_open.css);
 @import url(../blocks/popupAddCard/__close/popupAddCard__close.css);
 @import url(../blocks/popupAddCard/__save/popupAddCard__save.css);
 @import url(../blocks/popupAddCard/__container/popupAddCard__container.css);
